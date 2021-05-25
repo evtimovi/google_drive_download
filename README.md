@@ -21,3 +21,8 @@ Obviously, feel free to change where the scripts write but the `download_file.py
 Some of this code was originally given in the [Python Google Drive API Quickstart](https://developers.google.com/drive/api/v3/quickstart/python)
 That code is available in a [Google repo](https://github.com/googleworkspace/python-samples/blob/master/drive/quickstart/quickstart.py) and it carries [an Apache license](https://github.com/googleworkspace/python-samples/blob/master/LICENSE).
 It is also useful to refer to the [docs for the functions](https://developers.google.com/drive/api/v3/reference/files/list)
+
+## Similar Tools
+I also heard there are two other tools that get this job done. They are probably more bug-free and better maintained, so here they are:
+* `rclone` at rclone.org
+* `gdown` at https://pypi.org/project/gdown/ 
