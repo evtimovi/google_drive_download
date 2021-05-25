@@ -24,5 +24,5 @@ It is also useful to refer to the [docs for the functions](https://developers.go
 
 ## Similar Tools
 I also heard there are two other tools that get this job done. They are probably more bug-free and better maintained, so here they are:
-* `rclone` at rclone.org
+* `rclone` at https://rclone.org
 * `gdown` at https://pypi.org/project/gdown/ 
