@@ -3,7 +3,10 @@
 Every time I need to download a lot of files from Google Drive (e.g. a dataset), it's always incredibly frustrating and slow to get that done. The browser UI very often fails mysteriously and when it does work, it is slow. So here are two scripts to download a file and download a folder programmatically, in case they are more broadly useful. 
 
 ## Prereqs
-You would need to do the prerequisites here https://developers.google.com/drive/api/v3/quickstart/python and in particular "Create credentials" (https://developers.google.com/workspace/guides/create-credentials) The scripts expect you to put the OAuth file you create as client_secret.json in the same folder as the script (obviously you can change this in the script). I also needed to `pip install oauth2client` in addition to the 3 libraries they list.
+You would need to do the prerequisites [here](https://developers.google.com/drive/api/v3/quickstart/python) and in particular [Create credentials](https://developers.google.com/workspace/guides/create-credentials). The scripts expect you to put the OAuth file you create as `client_secret.json` in the same folder as the script (obviously you can change this in the script). I also needed to `pip install oauth2client` in addition to the 3 libraries they list, so e.g.
+```
+pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib oauth2client
+```
 
 # Running
 Run them with the `--noauth_local_webserver` option, e.g. `python3 download_folder.py --noauth_local_webserver`
@@ -17,4 +20,4 @@ Obviously, feel free to change where the scripts write but the `download_file.py
 ## Original Code
 Some of this code was originally given in the [Python Google Drive API Quickstart](https://developers.google.com/drive/api/v3/quickstart/python)
 
-It is also useful to refer to the docs for the functions `https://developers.google.com/drive/api/v3/reference/files/list`
+It is also useful to refer to the [docs for the functions](https://developers.google.com/drive/api/v3/reference/files/list)
