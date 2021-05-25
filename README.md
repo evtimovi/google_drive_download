@@ -17,7 +17,7 @@ Both scripts prompt you for a file id/folder id on the command line. You can fin
 ## Outputs
 Obviously, feel free to change where the scripts write but the `download_file.py` one spits out the file in the same folder as the script and `download_folder.py` spits them out in a `downloaded/` subfolder (but it does not create it).
 
-## Original Code
+## Misc
 Some of this code was originally given in the [Python Google Drive API Quickstart](https://developers.google.com/drive/api/v3/quickstart/python)
-
+That code is available in a [Google repo](https://github.com/googleworkspace/python-samples/blob/master/drive/quickstart/quickstart.py) and it carries [an Apache license](https://github.com/googleworkspace/python-samples/blob/master/LICENSE).
 It is also useful to refer to the [docs for the functions](https://developers.google.com/drive/api/v3/reference/files/list)
