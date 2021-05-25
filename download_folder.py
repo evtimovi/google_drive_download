@@ -23,7 +23,7 @@ if __name__ == "__main__":
 
     folder_id = input("Google Drive folder id: ")
 
-	should_break = False
+    should_break = False
     while not should_break:
         list_of_files = filesresource.list(
             q="'{folder_id}' in parents".format(folder_id=folder_id),
