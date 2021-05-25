@@ -23,12 +23,17 @@ if __name__ == "__main__":
 
     folder_id = input("Google Drive folder id: ")
 
-    list_of_files = filesresource.list(
-        q="'{folder_id}' in parents".format(folder_id=folder_id),
-        pageSize=1000
-    ).execute()
+	should_break = False
+    while not should_break:
+        list_of_files = filesresource.list(
+            q="'{folder_id}' in parents".format(folder_id=folder_id),
+            pageSize=1000,
+            pageToken=list_of_files['nextPageToken']
+        ).execute()
 
-    while 'nextPageToken' in list_of_files and list_of_files['nextPageToken'] != '':
+        if not ('nextPageToken' in list_of_files and list_of_files['nextPageToken'] != ''):
+            should_break = True
+
         for file_dict in list_of_files["files"]:
             file_id = file_dict["id"]
             filename = file_dict["name"]
@@ -42,12 +47,4 @@ if __name__ == "__main__":
                 status, done = downloader.next_chunk()
                 print("Download %d%%." % int(status.progress() * 100))
             fh.close()
-
-        list_of_files = filesresource.list(
-            q="'{folder_id}' in parents".format(folder_id=folder_id),
-            pageSize=1000,
-            pageToken=list_of_files['nextPageToken']
-        ).execute()
-
-
 
